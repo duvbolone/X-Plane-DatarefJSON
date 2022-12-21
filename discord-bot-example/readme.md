@@ -27,6 +27,8 @@
     ```
   - You should see "I'm ready for usage" in your terminal after a while, this means that you can use the bot
 
-# Screenrecording
+# Screen recording
+
 The bot in usage:
+
 https://user-images.githubusercontent.com/83077061/208854962-c0608f60-00cc-4454-b020-aff6a3aef7ef.mov
