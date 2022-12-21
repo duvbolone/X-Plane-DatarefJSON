@@ -28,7 +28,7 @@
   - You should see "I'm ready for usage" in your terminal after a while, this means that you can use the bot
   
  
-If you're having any troubles, please make an [issue](https://github.com/duvbolone/X-Plane-DatarefJSON/issues) or contact me on [Discord](https://discord.com/users/668874138160594985)
+If you're having any troubles, please make an [issue](https://github.com/duvbolone/X-Plane-DatarefJSON/issues) or contact me on [Discord](https://discord.com/users/668874138160594985)(`Matt3o0#7010`)
 
 
 # Screen recording
