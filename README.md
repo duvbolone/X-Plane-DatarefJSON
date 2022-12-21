@@ -2,6 +2,8 @@
 
 All X-Plane datarefs formatted in json
 
+Datarefs I used where compiled by Laminar Research on:`2 1208 Fri Dec  9 15:10:07 2022`
+
 I have included a [Discord bot](https://github.com/duvbolone/X-Plane-DatarefJSON/tree/main/discord-bot-example) as an example.
 
 
