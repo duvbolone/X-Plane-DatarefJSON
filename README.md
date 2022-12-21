@@ -1,6 +1,6 @@
 # X-Plane-DatarefJSON
 
-All X-Plane datarefs formatted in json
+All X-Plane datarefs formatted in JSON format
 
 Datarefs I used where compiled by Laminar Research on:`Fri Dec  9 15:10:07 2022` for version `1208`
 
