@@ -13,13 +13,15 @@
   - Give it an unique name
   - Go to the "bot" tab at the left
   - Click "Add Bot"
+  - Reset and copy the token, you will need this for later
   - Go to the "Oauth2" tab and then the "URL generator" tab.
   - Check the scope "bot"
   - Run the URL below in your browser
   - A bot should have joined the server you selected
  
  **3. Running the bot:**
-  - Download the [main.py](https://github.com/duvbolone/X-Plane-DatarefJSON/blob/main/discord-bot-example/main.py) file in this repository
+  - Download the [main.py](https://github.com/duvbolone/X-Plane-DatarefJSON/blob/main/discord-bot-example/main.py) and the [defaultDatarefs.json](https://github.com/duvbolone/X-Plane-DatarefJSON/blob/main/defaultDatarefs.json) file in this repository
+  - Open it a text editor of your choice, and change at the top the `jsonpath` variable to where ever the `defaultDatarefs.json` file is located(relative path!). Then at the bottom paste the token you copied earlier in replacement of `'TOKEN'`
   - Open your terminal
   - Run the following command(change the path to where the file is):
     ```sh
