@@ -1,5 +1,7 @@
 # X-Plane-DatarefJSON
 
+![code_sample](https://github.com/duvbolone/X-Plane-DatarefJSON/assets/83077061/f2be2c8a-aa9e-407b-9422-9e15c8700e65)
+
 All X-Plane datarefs formatted in JSON format
 
 Datarefs I used where compiled by Laminar Research on:`Fri Dec  9 15:10:07 2022` for version `1208`
