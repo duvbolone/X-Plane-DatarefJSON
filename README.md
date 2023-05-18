@@ -1,6 +1,6 @@
 # X-Plane-DatarefJSON
 
-![code_sample](https://github.com/duvbolone/X-Plane-DatarefJSON/assets/83077061/f2be2c8a-aa9e-407b-9422-9e15c8700e65)
+![code_sample](https://matt3o0.vercel.app/projects/xpdrefjson/code_sample.png)
 
 All X-Plane datarefs formatted in JSON format
 
