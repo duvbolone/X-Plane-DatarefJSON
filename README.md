@@ -1,8 +1,10 @@
 # X-Plane-DatarefJSON
 
-![code_sample](https://matt3o0.vercel.app/projects/xpdrefjson/code_sample.png)
+## All **X-Plane datarefs** and **commands** in **JSON** format.
 
-All X-Plane datarefs and commands formatted in JSON format
+**Find the files [here](https://github.com/duvbolone/X-Plane-DatarefJSON/tree/main/json_files)**
+
+![code_sample](https://matt3o0.vercel.app/projects/xpdrefjson/code_sample.png)
 
 Datarefs I used where compiled by Laminar Research on: `Thu Mar 30 01:14:18 2023` for version `1208`.
 
