@@ -1,4 +1,4 @@
-Commands.txt
-DataRefs.txt
+datarefs.json
+commands.json
 test.ipynb
 *.DS_Store

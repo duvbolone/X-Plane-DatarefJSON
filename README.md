@@ -2,10 +2,30 @@
 
 ## All **X-Plane datarefs** and **commands** in **JSON** format.
 
-**Find the files [here](https://github.com/duvbolone/X-Plane-DatarefJSON/tree/main/json_files)**
+## Format
+All exported files are - as the project name says - converted in JSON format.
 
-![code_sample](https://matt3o0.vercel.app/projects/xpdrefjson/code_sample.png)
+Example:
+```json
+{
+    "version": "1208",
+    "time": "2023-12-24T12:39:00Z",
+    "datarefs": {
+        "sim/world/boat/carrier_deck_height_mtr": {
+            "path": "sim/world/boat/carrier_deck_height_mtr",
+            "type": "float",
+            "writable": false,
+            "unit": "meters",
+            "description": "Deck height of the carrier (in coordinates of the OBJ model)"
+        },
+    }
+}
+```
+| Key                      | Description                                                                                                    |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------- |
+| `version`                | The X-Plane version the datarefs come from. This information is taken from the top of the `DataRefs.txt` file. |
+| `time`                   | When the JSON file was generated in ISO 8601 format (UTC).                                                     |
+| `datarefs` or `commands` | Contains all the datarefs or commands depending on the file.                                                   |
 
-Datarefs I used where compiled by Laminar Research on: `Thu Mar 30 01:14:18 2023` for version `1208`.
-
-If you're having any troubles, please make an [issue](https://github.com/duvbolone/X-Plane-DatarefJSON/issues) or contact me on [Discord](https://discord.com/users/668874138160594985)(`Matt3o0#7010`)
+> [!NOTE]
+> Not all datarefs have every property (`type`, `type`, etc.) available. In the generated JSON file missing properties are simply dropped, so you should always check if the key exists before trying to access it.
