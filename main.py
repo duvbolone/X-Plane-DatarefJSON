@@ -38,6 +38,7 @@ info("Platform", f"{system_name} ({platform.platform()})")
 
 xplane_path = ""
 xplane_version = 0
+paths = []
 
 if system_name == "windows":
     active_drives = []
@@ -53,47 +54,39 @@ if system_name == "windows":
     for drive in active_drives:
         paths.append(rf"{drive}:\SteamLibrary\steamapps\common")
 
-    for path in paths:
-        path12 = os.path.join(path, "X-Plane 12")
-
-        if os.path.exists(path12):
-            xplane_path = path12
-            xplane_version = 12
-            break
-
-        path11 = os.path.join(path, "X-Plane 11")
-
-        if os.path.exists(path11):
-            xplane_path = path11
-            xplane_version = 12
-            break
-
 elif system_name == "darwin":
     paths = [
         os.path.expanduser("~/Library/Application Support/Steam/steamapps/common")
     ]
-
-    for path in paths:
-        path12 = os.path.join(path, "X-Plane 12")
-
-        if os.path.exists(path12):
-            xplane_path = path12
-            xplane_version = 12
-            break
-
-        path11 = os.path.join(path, "X-Plane 11")
-
-        if os.path.exists(path11):
-            xplane_path = path11
-            xplane_version = 12
-            break
     
+
+for path in paths:
+    path12 = os.path.join(path, "X-Plane 12")
+
+    if os.path.exists(path12):
+        xplane_path = path12
+        xplane_version = 12
+        break
+
+    path11 = os.path.join(path, "X-Plane 11")
+
+    if os.path.exists(path11):
+        xplane_path = path11
+        xplane_version = 11
+        break
 
 if not xplane_path:
     error("No X-Plane path found!")
     xplane_path = cinput("Please enter your X-Plane installation path")
+    if not os.path.exists(xplane_path):
+        error("Directory not found.")
+        exit(1)
+    if not os.path.isdir(xplane_path):
+        error("Not a directory.")
+        exit(1)
 
     xplane_version = int(xplane_path.split()[-1])
+
 
 info("X-Plane path", xplane_path)
 info("X-Plane version", xplane_version)
@@ -107,11 +100,17 @@ datarefs_path = os.path.join(plugins_path, "DataRefs.txt")
 if not os.path.exists(datarefs_path):
     error("No 'DataRefs.txt' found.")
     datarefs_path = cinput("If the file has a different name, then please enter its name (with extension)")
+    if not os.path.exists(datarefs_path):
+        error("File not found")
+        exit(1)
 
 commands_path = os.path.join(plugins_path, "Commands.txt")
 if not os.path.exists(commands_path):
     error("No 'Commands.txt' found.")
     commands_path = cinput("If the file has a different name, then please enter its name (with extension)")
+    if not os.path.exists(commands_path):
+        error("File not found")
+        exit(1)
 
 try:
     full_version = ""
@@ -131,10 +130,13 @@ try:
 
 except PermissionError as e:
     error(f"Couldn't access to certain files:\n\n{e}")
+    exit(1)
 except FileNotFoundError as e:
     error(f"Couldn't find certain files:\n\n{e}")
+    exit(1)
 except Exception as e:
     error(f"Something went wrong:\n\n{e}")
+    exit(1)
 
 print("\n\033[32;1mSuccess!\033[0m")
 print("Exported to 'datarefs.json' and 'commands.json'")
