@@ -33,13 +33,13 @@ if "-I" in sys.argv:
 if indent or indent == 0:
     warn("You have set an indent value. While indented JSON improves readability, it significantly increases file sizes.")
 
-full_platform = platform.platform().lower()
-info("Platform", full_platform)
+system_name = platform.system().lower()
+info("Platform", f"{system_name} ({platform.platform()})")
 
 xplane_path = ""
 xplane_version = 0
 
-if full_platform.startswith("windows"):
+if system_name == "windows":
     active_drives = []
     for letter in "ABDEFGHIJKLMNOPQRSTUVWXYZ":
         if os.path.exists(f"{letter}:\\"):
@@ -68,7 +68,7 @@ if full_platform.startswith("windows"):
             xplane_version = 12
             break
 
-elif full_platform == "darwin":
+elif system_name == "darwin":
     paths = [
         os.path.expanduser("~/Library/Application Support/Steam/steamapps/common")
     ]
